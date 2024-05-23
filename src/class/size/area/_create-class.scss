@@ -1,0 +1,17 @@
+@import '../../../storage/ratio'; // Ratios data
+@import './maker'; // Mixin for generating aspect ratio classes
+
+
+
+// this mixin prefix .A and postfix ratio
+// like .A-3x4
+@include ratio-define-area($ratio);
+
+// this mixin class a name
+// like .HD
+// all date get from storage folder
+@include ratio-name-area($mixed);
+@include ratio-name-area($print-media);
+@include ratio-name-area($video-film);
+@include ratio-name-area($social-media);
+@include ratio-name-area($common-ratio);

@@ -1,0 +1,23 @@
+// Each color will be stored this color in rgba format.
+$colors: (
+  "blue": rgb(0, 0, 255),
+  "green": rgb(0, 128, 0), 
+  "yellow": rgb(255, 255, 0),
+  "red": rgb(255, 0, 0)
+);
+
+
+// And the alpha values will create variations of these colors.
+$alphas: (
+  "10": 1,
+  "9": 0.9,
+  "8": 0.8,
+  "7": 0.7,
+  "6": 0.6,
+  "5": 0.5,// semi transparent
+  "4": 0.4,
+  "3": 0.3,
+  "2": 0.2,
+  "1": 0.1,
+  "0": 0 // Transparent
+);

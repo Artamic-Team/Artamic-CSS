@@ -1,0 +1,246 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.w-100x{
+    width: 100px;
+}
+.color-blue-10{
+    background-color: rgb(62, 62, 152);
+}
+.color-red-10{
+    background-color: rgb(174, 48, 48);
+}
+.m-xl{
+    margin: 10px;
+}
+
+.A-1x1 {
+  aspect-ratio: 1/1;
+}
+
+.A-4x3 {
+  aspect-ratio: 4/3;
+}
+
+.A-16x9 {
+  aspect-ratio: 16/9;
+}
+
+.A-21x9 {
+  aspect-ratio: 21/9;
+}
+
+.A-3x4 {
+  aspect-ratio: 3/4;
+}
+
+.A-9x16 {
+  aspect-ratio: 9/16;
+}
+
+.A-1_6x1 {
+  aspect-ratio: 1.618/1;
+}
+
+.A-2x1 {
+  aspect-ratio: 2/1;
+}
+
+.A-1x2 {
+  aspect-ratio: 1/2;
+}
+
+.A-5x4 {
+  aspect-ratio: 5/4;
+}
+
+.A-3x2 {
+  aspect-ratio: 3/2;
+}
+
+.A-1x1_5 {
+  aspect-ratio: 1/1.5;
+}
+
+.A-1_5x1 {
+  aspect-ratio: 1.5/1;
+}
+
+.A-4x5 {
+  aspect-ratio: 4/5;
+}
+
+.A-17x9 {
+  aspect-ratio: 17/9;
+}
+
+.A-14x5 {
+  aspect-ratio: 14/5;
+}
+
+.A-7x5 {
+  aspect-ratio: 7/5;
+}
+
+.A-13x9 {
+  aspect-ratio: 13/9;
+}
+
+.panorama {
+  aspect-ratio: 4/1;
+}
+
+.video-call {
+  aspect-ratio: 4/3;
+}
+
+.mobile {
+  aspect-ratio: 9/16;
+}
+
+.tablet {
+  aspect-ratio: 3/4;
+}
+
+.labtop {
+  aspect-ratio: 16/10;
+}
+
+.letter {
+  aspect-ratio: 8.5/11;
+}
+
+.A4 {
+  aspect-ratio: 210/297;
+}
+
+.A3 {
+  aspect-ratio: 297/420;
+}
+
+.poster {
+  aspect-ratio: 24/36;
+}
+
+.banner {
+  aspect-ratio: 3/1;
+}
+
+.tail-banner {
+  aspect-ratio: 1/3;
+}
+
+.HD {
+  aspect-ratio: 16/9;
+}
+
+.cinema {
+  aspect-ratio: 21/9;
+}
+
+.ultra-wide {
+  aspect-ratio: 21/9;
+}
+
+.IMAX {
+  aspect-ratio: 1.43/1;
+}
+
+.standard {
+  aspect-ratio: 4/3;
+}
+
+.insta-post {
+  aspect-ratio: 1/1;
+}
+
+.insta-story {
+  aspect-ratio: 9/16;
+}
+
+.y-thum {
+  aspect-ratio: 16/9;
+}
+
+.fb-cover {
+  aspect-ratio: 820/312;
+}
+
+.x-cover {
+  aspect-ratio: 1500/500;
+}
+
+.ln-cover {
+  aspect-ratio: 1584/396;
+}
+
+.square {
+  aspect-ratio: 1/1;
+}
+
+.landscape {
+  aspect-ratio: 4/3;
+}
+
+.wide-screen {
+  aspect-ratio: 16/9;
+}
+
+.portrait {
+  aspect-ratio: 3/4;
+}
+
+.tall {
+  aspect-ratio: 3/4;
+}
+
+.golden-ratio {
+  aspect-ratio: 1.618/1;
+}/*# sourceMappingURL=main.css.map */

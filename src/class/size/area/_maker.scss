@@ -1,0 +1,24 @@
+// Mixin to define aspect ratio classes with 'A-' prefix
+// This mixin generates classes with a prefix 'A-' followed by the ratio name
+//$ratios is map like $ratio-name: $ratio-value
+//class will be .A-$ratio-name
+@mixin ratio-define-area($ratios) {
+  @each $ratio-name, $ratio-value in $ratios {
+    .A-#{$ratio-name} {
+      aspect-ratio: #{$ratio-value};
+    }
+  }
+}
+
+
+// Mixin to define aspect ratio classes without any prefix
+// This mixin generates classes with the ratio name directly
+//$ratios is map like $ratio-name: $ratio-value
+//class will be .$ratio-name
+@mixin ratio-name-area($ratios) {
+  @each $ratio-name, $ratio-value in $ratios {
+    .#{$ratio-name} {
+      aspect-ratio: #{$ratio-value};
+    }
+  }
+}
