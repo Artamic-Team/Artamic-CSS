@@ -1,0 +1,41 @@
+// This mixin takes five parameters:
+// $postfix: Used as part of the class name to indicate the color.
+// $alpha-postfix: Used as part of the class name to indicate the transparency level.
+// $color-code: The color code 
+// $alpha: The transparency level 
+// $type: Specifies the type of style to be applied (in this case, "color" for text color).
+
+
+//Logic:
+//If $type is "color", a CSS class for the text color is generated.
+//Otherwise, a CSS class for the background color is generated.
+
+
+
+// Mixin to define aspect color-generator classes with 'color-'  prefix
+// This mixin generates classes with a prefix 'color' followed by the  name
+
+
+@mixin color-generator($postfix, $alpha-postfix, $color-code, $alpha,$type) {
+
+    @if $type=="color"{
+        .color-#{$postfix}-#{$alpha-postfix} {
+
+            color: rgba(red($color-code), green($color-code), blue($color-code), $alpha);
+        }
+       
+    }
+
+
+    // Mixin to define aspect color-generator classes with  'bg-' prefix
+    // This mixin generates classes with a prefix 'bg' followed by the  name
+
+
+    @else {
+
+        .bg-#{$postfix}-#{$alpha-postfix} {
+            background-color: rgba(red($color-code), green($color-code), blue($color-code), $alpha);
+        }
+
+    }
+}

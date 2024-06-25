@@ -1,0 +1,31 @@
+@import "./../../../storage/mixin";   // Minxins data
+@import "./../../../storage/color-storage"; // Mixin for generating aspect color  generator classes
+  
+// Each "../" moves up one directory level.
+// "../../../storage/mixin" means you are going up three levels from your current directory and then entering into storage/mixin.
+
+
+//Loop through $colors
+//$postfix and $color-code are variables representing the class name postfix
+//This loop iterates over each item in the $colors map.
+
+
+//loop through $alphas
+//$alpha-postfix and $alpha are variables representing the class name postfix for the alpha
+//This loop iterates over each item in the $alphas map.
+
+
+//color-generator mixin:
+//color-generator mixin is included with the variables from the loops 
+//"color" string is passed as the type argument to specify that the text color should be set.
+
+
+@each $postfix, $color-code in $colors {
+    @each $alpha-postfix, $alpha in $alphas {
+        @include color-generator($postfix, $alpha-postfix, $color-code, $alpha, "color");
+
+
+    }
+}
+
+
