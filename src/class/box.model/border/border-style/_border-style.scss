@@ -1,0 +1,41 @@
+@import "./style-value";
+
+@each $key, $value in $styles{
+
+    .b-#{$key}{
+
+        border-style: $value;
+    }
+}
+
+@each $key, $value in $styles{
+
+    .b-top-#{$key}{
+
+        border-top-style: $value;
+    }
+}
+
+@each $key, $value in $styles{
+
+    .b-bottom-#{$key}{
+
+        border-bottom-style: $value;
+    }
+}
+
+@each $key, $value in $styles{
+
+    .b-left-#{$key}{
+
+        border-left-style: $value;
+    }
+}
+
+@each $key, $value in $styles{
+
+    .b-right-#{$key}{
+
+        border-right-style: $value;
+    }
+}

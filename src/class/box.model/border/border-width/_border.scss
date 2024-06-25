@@ -1,0 +1,45 @@
+@import "./values";
+
+//units is a map
+//here, each line have 2 proprties. 1st one key and other one is value
+//key:value
+
+@each $key, $value in $units {
+
+  .b-w-#{$key}{
+    border-width: $value;
+    border-style: solid;
+  }
+}
+
+@each $key, $value in $units {
+
+  // b-top-w-key is a class name
+  //example: b-top-w-xl
+
+  .b-top-w-#{$key} {
+    border-top-width: $value;
+    border-top-style: solid;
+  }
+}
+
+@each $key, $value in $units {
+  .b-bottom-w-#{$key} {
+    border-bottom-width: $value;
+    border-bottom-style: solid;
+  }
+}
+
+@each $key, $value in $units {
+  .b-left-w-#{$key} {
+    border-left-width: $value;
+    border-left-style: solid;
+  }
+}
+
+@each $key, $value in $units {
+  .b-right-w-#{$key} {
+    border-right-width: $value;
+    border-right-style: solid;
+  }
+}
