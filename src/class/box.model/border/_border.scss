@@ -1,19 +1,6 @@
-@import "./values";
-
-@each $key, $value in $units {
-    .b-top-w-#{$key} {
-      border-top-width: $value;
-      border-style: solid;
-    }
-}
-
-@each $key, $value in $units {
-  .b-bottom-w-#{$key} {
-    border-bottom-width: $value;
-    border-style: solid;
-  }
-}
-
-
+@import "./border-width/border";
+@import "./border-style/border-style";
+@import "./border-radius/border-radius";
+@import "./border-color/border-color";
 
 
