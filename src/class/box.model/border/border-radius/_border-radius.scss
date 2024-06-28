@@ -1,0 +1,73 @@
+@import "./radius-value";
+
+// .b-w-#{$key}{
+//     border-width: $value;
+//     border-style: solid;
+//   }
+
+@each $key, $value in $round-percent{
+
+    .round-#{$key}{
+        border-radius: $value;
+    }
+}
+
+@each $key, $value in $round-percent{
+
+    .round-tl-#{$key}{
+        border-top-left-radius: $value;
+    }
+
+}
+
+@each $key, $value in $round-percent{
+
+    .round-tr-#{$key}{
+        border-top-right-radius: $value;
+    }
+
+}
+
+@each $key, $value in $round-percent{
+
+    .round-bl-#{$key}{
+        border-bottom-left-radius: $value;
+    }
+}
+
+@each $key, $value in $round-percent{
+    .round-br-#{$key}{
+        border-bottom-right-radius: $value;
+
+    }
+}
+
+@each $key, $value in $round-pixel{
+    .round-#{$key}{
+        border-radius: $value;
+    }
+}
+
+@each $key, $value in $round-pixel{
+    .round-tl-#{$key}{
+        border-top-left-radius: $value;
+    }
+}
+
+@each $key, $value in $round-pixel{
+    .round-tr-#{$key}{
+        border-top-right-radius: $value;
+    }
+}
+
+@each $key, $value in $round-pixel{
+    .round-bl-#{$key}{
+        border-bottom-left-radius: $value;
+    }
+}
+
+@each $key, $value in $round-pixel{
+    .round-br-#{$key}{
+        border-bottom-right-radius: $value;
+    }
+}
