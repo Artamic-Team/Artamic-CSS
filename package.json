@@ -2,7 +2,7 @@
   "name": "artamic-css",
   "version": "1.0.0",
   "description": "A CSS framework",
-  "main": "src/main.css",
+  "main": "main.css",
   "scripts": {
     "build": "sass main.scss main.css"
   },
