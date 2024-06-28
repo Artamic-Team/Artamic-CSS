@@ -4,7 +4,7 @@
   "description": "A CSS framework",
   "main": "src/main.css",
   "scripts": {
-    "build": "sass src/main.scss src/main.css"
+    "build": "sass main.scss main.css"
   },
   "repository": {
     "type": "git",
