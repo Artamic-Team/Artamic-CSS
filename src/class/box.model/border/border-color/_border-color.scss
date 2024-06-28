@@ -1,0 +1,55 @@
+@import "./../../../../storage/color-storage";
+
+@each $key-color, $color-value in $colors {
+    @each $alpha-key, $alpha-value in $alphas {
+
+        .b-color-#{$key-color}-#{$alpha-key} {
+
+            border-color: rgba(red($color-value), green($color-value), blue($color-value), $alpha-value);
+        };
+    }
+}
+
+// .b-color-red-10{
+//     border-color: rgba(120, 111, 130, 1);
+// }
+
+@each $key-color, $color-value in $colors {
+    @each $alpha-key, $alpha-value in $alphas {
+
+        .b-t-color-#{$key-color}-#{$alpha-key} {
+
+            border-top-color: rgba(red($color-value), green($color-value), blue($color-value), $alpha-value);
+        };
+    }
+}
+
+@each $key-color, $color-value in $colors {
+    @each $alpha-key, $alpha-value in $alphas {
+
+        .b-l-color-#{$key-color}-#{$alpha-key} {
+
+            border-left-color: rgba(red($color-value), green($color-value), blue($color-value), $alpha-value);
+        };
+    }
+}
+
+@each $key-color, $color-value in $colors {
+    @each $alpha-key, $alpha-value in $alphas {
+
+        .b-b-color-#{$key-color}-#{$alpha-key} {
+
+            border-bottom-color: rgba(red($color-value), green($color-value), blue($color-value), $alpha-value);
+        };
+    }
+}
+
+@each $key-color, $color-value in $colors {
+    @each $alpha-key, $alpha-value in $alphas {
+
+        .b-r-color-#{$key-color}-#{$alpha-key} {
+
+            border-right-color: rgba(red($color-value), green($color-value), blue($color-value), $alpha-value);
+        };
+    }
+}
