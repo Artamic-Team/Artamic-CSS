@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Artamic-Team/Artamic-CSS.git"
   },
-  "author": "Your Name",
+  "author": "Artamic",
   "license": "MIT",
   "dependencies": {
     "sass": "^1.32.0"
