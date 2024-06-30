@@ -1,11 +1,13 @@
-.h-800x {
-    height: 800px;
-}
-.h-600x{
-  height: 600px;
-}
+@import "../../../storage/value";
+@import "../../../storage/func";
+@import "../../../storage/mixin";
 
-.h-500x{
-  height: 500px;
-}
+@each $key, $value in $height-units {
 
+    $end: set-end-value($key);
+
+    @for $i from 1 through $end {
+        @include set-height-value($key, $value, $end,$i,"height");
+    }
+
+}
