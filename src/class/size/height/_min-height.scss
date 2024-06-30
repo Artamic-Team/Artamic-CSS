@@ -2,12 +2,12 @@
 @import "../../../storage/func";
 @import "../../../storage/mixin";
 
-@each $key, $value in $width-units {
+@each $key, $value in $height-units {
 
     $end: set-end-value($key);
 
     @for $i from 1 through $end {
-        @include set-width-value($key, $value, $end,$i,"width");
+        @include set-height-value($key, $value, $end,$i,"min-height","min");
     }
 
 }

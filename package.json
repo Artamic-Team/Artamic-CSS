@@ -1,14 +1,18 @@
 {
   "name": "artamic-css",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A CSS framework",
+  "main": "main.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass main.scss main.css"
   },
-  "keywords": [
-    "css"
-  ],
-  "author": "artamic team",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artamic-Team/Artamic-CSS.git"
+  },
+  "author": "Artamic",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.32.0"
+  }
 }
