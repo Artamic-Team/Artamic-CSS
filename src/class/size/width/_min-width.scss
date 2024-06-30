@@ -7,7 +7,7 @@
     $end: set-end-value($key);
 
     @for $i from 1 through $end {
-        @include set-width-value($key, $value, $end,$i,"width");
+        @include set-width-value($key, $value, $end,$i,"min-width","min");
     }
 
 }

@@ -1,0 +1,53 @@
+@function set-end-value($key) {
+
+
+    @if $key =="x" {
+        @return 800;
+    }
+
+    @else if $key =="rm" {
+        @return 120;
+    }
+
+    @else if $key =="v" {
+        @return 100;
+    }
+
+    @else if $key =="p" {
+        @return 100;
+    }
+
+    @else {
+        @return 1;
+    }
+
+}
+
+
+
+@function set-postfix-height($postfix) {
+    @if($postfix=="height") {
+
+        @return h;
+    }
+
+    @else {
+        @return h-#{$postfix};
+
+    }
+}
+
+
+
+
+@function set-postfix-width($postfix) {
+    @if($postfix=="width") {
+
+        @return w;
+    }
+
+    @else {
+        @return w-#{$postfix};
+
+    }
+}

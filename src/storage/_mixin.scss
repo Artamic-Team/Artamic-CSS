@@ -1,3 +1,5 @@
+@import './func';
+
 // This mixin takes five parameters:
 // $postfix: Used as part of the class name to indicate the color.
 // $alpha-postfix: Used as part of the class name to indicate the transparency level.
@@ -16,14 +18,14 @@
 // This mixin generates classes with a prefix 'color' followed by the  name
 
 
-@mixin color-generator($postfix, $alpha-postfix, $color-code, $alpha,$type) {
+@mixin color-generator($postfix, $alpha-postfix, $color-code, $alpha, $type) {
 
-    @if $type=="color"{
+    @if $type=="color" {
         .color-#{$postfix}-#{$alpha-postfix} {
 
             color: rgba(red($color-code), green($color-code), blue($color-code), $alpha);
         }
-       
+
     }
 
 
@@ -39,3 +41,58 @@
 
     }
 }
+
+
+
+
+
+
+@mixin set-height-value($key, $value, $end, $i, $property, $postfix: "height") {
+
+    @if ($key=="fit" or $key=="max-content" or $key=="min-content" or $key=="auto") {
+
+        $name: set-postfix-height($postfix);
+
+        .#{$name}-#{$key} {
+            #{$property}: $value;
+        }
+
+    }
+
+    @else {
+
+        $name: set-postfix-height($postfix);
+
+        .#{$name}-#{$i}#{$key} {
+
+            #{$property}: if($key =="p", percentage($i / 100), #{$i}#{$value});
+        }
+    }
+}
+
+
+
+
+@mixin set-width-value($key, $value, $end, $i, $property, $postfix: "width") {
+
+    @if ($key=="fit" or $key=="max-content" or $key=="min-content" or $key=="auto") {
+
+        $name: set-postfix-width($postfix);
+
+        .#{$name}-#{$key} {
+            #{$property}: $value;
+        }
+
+    }
+
+    @else {
+
+        $name: set-postfix-width($postfix);
+
+        .#{$name}-#{$i}#{$key} {
+
+            #{$property}: if($key =="p", percentage($i / 100), #{$i}#{$value});
+        }
+    }
+}
+
