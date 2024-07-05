@@ -1,3 +1,4 @@
+@import "../storage/value";
 @import './func';
 
 // This mixin takes five parameters:
@@ -20,79 +21,221 @@
 
 @mixin color-generator($postfix, $alpha-postfix, $color-code, $alpha, $type) {
 
-    @if $type=="color" {
-        .color-#{$postfix}-#{$alpha-postfix} {
+  @if $type=="color" {
+    .color-#{$postfix}-#{$alpha-postfix} {
 
-            color: rgba(red($color-code), green($color-code), blue($color-code), $alpha);
-        }
-
+      color: rgba(red($color-code), green($color-code), blue($color-code), $alpha);
     }
 
-
-    // Mixin to define aspect color-generator classes with  'bg-' prefix
-    // This mixin generates classes with a prefix 'bg' followed by the  name
+  }
 
 
-    @else {
+  // Mixin to define aspect color-generator classes with  'bg-' prefix
+  // This mixin generates classes with a prefix 'bg' followed by the  name
 
-        .bg-#{$postfix}-#{$alpha-postfix} {
-            background-color: rgba(red($color-code), green($color-code), blue($color-code), $alpha);
-        }
 
+  @else {
+
+    .bg-#{$postfix}-#{$alpha-postfix} {
+      background-color: rgba(red($color-code), green($color-code), blue($color-code), $alpha);
     }
+
+  }
 }
 
 
 
 
-
+// $key: This string specifies the type of width value (e.g., "fit", "100px", "2em").
+// $value: This holds the actual width value (e.g., "100px", "2em").
+// $end : This argument for breckdown of lopp.
+// $i : loop variable
+// $property: This specifies the CSS property to apply the width to (usually "height").
+// $postfix : This string is used as a prefix for the generated CSS classes.
 
 @mixin set-height-value($key, $value, $end, $i, $property, $postfix: "height") {
 
-    @if ($key=="fit" or $key=="max-content" or $key=="min-content" or $key=="auto") {
+  @if ($key=="fit" or $key=="max-content" or $key=="min-content" or $key=="auto") {
 
-        $name: set-postfix-height($postfix);
+    $name: set-postfix-height($postfix);
 
-        .#{$name}-#{$key} {
-            #{$property}: $value;
-        }
-
+    .#{$name}-#{$key} {
+      #{$property}: $value;
     }
 
-    @else {
+  }
 
-        $name: set-postfix-height($postfix);
+  @else {
 
-        .#{$name}-#{$i}#{$key} {
+    $name: set-postfix-height($postfix);
 
-            #{$property}: if($key =="p", percentage($i / 100), #{$i}#{$value});
-        }
+    .#{$name}-#{$i}#{$key} {
+
+      #{$property}: if($key =="p", percentage($i / 100), #{$i}#{$value});
     }
+  }
 }
 
 
 
+
+
+// $key: This string specifies the type of width value (e.g., "fit", "100px", "2em").
+// $value: This holds the actual width value (e.g., "100px", "2em").
+// $end : This argument for breckdown of lopp.
+// $i : loop variable
+// $property: This specifies the CSS property to apply the width to (usually "width").
+// $postfix : This string is used as a prefix for the generated CSS classes.
 
 @mixin set-width-value($key, $value, $end, $i, $property, $postfix: "width") {
 
-    @if ($key=="fit" or $key=="max-content" or $key=="min-content" or $key=="auto") {
+  @if ($key=="fit" or $key=="max-content" or $key=="min-content" or $key=="auto") {
 
-        $name: set-postfix-width($postfix);
+    $name: set-postfix-width($postfix);
 
-        .#{$name}-#{$key} {
-            #{$property}: $value;
-        }
+    .#{$name}-#{$key} {
+      #{$property}: $value;
+    }
 
+  }
+
+  @else {
+
+    $name: set-postfix-width($postfix);
+
+    .#{$name}-#{$i}#{$key} {
+
+      #{$property}: if($key =="p", percentage($i / 100), #{$i}#{$value});
+    }
+  }
+}
+
+
+
+
+
+//set the margin property and value
+//for horizontal and vertical
+@mixin margin($property, $value) {
+  @if $property =='x' {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  @else if $property =='y' {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  @else if $property =='top-right' {
+    margin-top: $value;
+    margin-right: $value;
+  }
+
+  @else if $property =='top-left' {
+    margin-top: $value;
+    margin-left: $value;
+  }
+
+  @else if $property =='bottom-right' {
+    margin-bottom: $value;
+    margin-right: $value;
+  }
+
+  @else if $property =='bottom-left' {
+    margin-bottom: $value;
+    margin-left: $value;
+  }
+
+  @else {
+    margin: $value;
+  }
+}
+
+
+
+//set the padding property and value
+//for horizontal and vertical
+@mixin padding($property, $value) {
+  @if $property =='x' {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  @else if $property =='y' {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  @else if $property =='top-right' {
+    padding-top: $value;
+    padding-right: $value;
+  }
+
+  @else if $property =='top-left' {
+    padding-top: $value;
+    padding-left: $value;
+  }
+
+  @else if $property =='bottom-right' {
+    padding-bottom: $value;
+    padding-right: $value;
+  }
+
+  @else if $property =='bottom-left' {
+    padding-bottom: $value;
+    padding-left: $value;
+  }
+
+  @else {
+    padding: $value;
+  }
+}
+
+
+
+
+
+// Generates classes for numeric values: 
+//For other units (like "x", "m") , 
+//it uses a loop to generate multiple CSS classes.
+// The loop iterates from 1 to a value obtained using
+// the end-value function.
+// Inside the loop, a CSS class is created with the $postfix,
+// the loop counter ($i), and 
+//the current unit ($key) appended.
+// The $prop property of this class is set to the loop counter 
+// value followed by the unit ($i#{$key}).
+// position will be top,right,bottom,left
+
+@mixin margin-padding-maker($postfix, $prop) {
+  @each $key, $value in $units-postfix {
+    $end: end-value($key); // set end value for loop
+
+    @if ($key =='auto') {
+      // class will be .m-auto or .p-auto
+      // or .m-position-postix or .p-position-auto
+      //$postfix: m or p and $prop css margin padding,propery
+      .#{$postfix}-#{$key} {
+        #{$prop}: #{$value};
+      }
     }
 
     @else {
-
-        $name: set-postfix-width($postfix);
-
-        .#{$name}-#{$i}#{$key} {
-
-            #{$property}: if($key =="p", percentage($i / 100), #{$i}#{$value});
+      @for $i from 1 through $end {
+        // class will be .m-3x or .p-4px or
+        // .m-position-postix or .p-position-postix
+        //$postfix: m or p or m-position or p-position
+        // and $prop css margin,padding property
+        .#{$postfix}-#{$i}#{$key} {
+          #{$prop}: #{$i}#{$value};
         }
+      }
+
     }
-}
+
+  }
+};
+
+
 

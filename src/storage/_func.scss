@@ -1,5 +1,7 @@
-@function set-end-value($key) {
+// @use "../storage/value" as *;
 
+// function for width and height end value
+@function set-end-value($key) {
 
     @if $key =="x" {
         @return 800;
@@ -14,17 +16,20 @@
     }
 
     @else if $key =="p" {
-        @return 100;
+        @return 200;
     }
 
     @else {
-        @return 1;
+        @return 0;
     }
 
 }
 
 
 
+
+
+//set h-min or h-max or h
 @function set-postfix-height($postfix) {
     @if($postfix=="height") {
 
@@ -39,7 +44,7 @@
 
 
 
-
+//set w-min or w-max or w
 @function set-postfix-width($postfix) {
     @if($postfix=="width") {
 
@@ -50,4 +55,33 @@
         @return w-#{$postfix};
 
     }
+}
+
+
+//for margin-padding end value set function
+//pass the key and set the end value for loop break
+@function end-value($key) {
+
+
+    @if $key =="x" {
+        @return 300;
+    }
+
+    @else if $key =="rm" {
+        @return 100;
+    }
+
+    @else if $key =="e" {
+        @return 100;
+    }
+
+
+    @else if $key =="p" {
+        @return 200;
+    }
+
+    @else {
+        @return 1;
+    }
+
 }

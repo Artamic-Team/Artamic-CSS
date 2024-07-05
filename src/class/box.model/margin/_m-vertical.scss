@@ -1,0 +1,26 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+@each $key, $value in $units-postfix {
+    $end: end-value($key);//set end value using function
+
+    @if ($key =='auto') {
+       //set value of  margin-top and margin-bottom
+      .my-#{$key} {
+        @include margin('y', #{$value});
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+         //set value of  margin-top and margin-bottom
+         //class name will be .my-size-postfix
+         // like .my-300x for 300px
+        .my-#{$i}#{$key} {
+            @include margin('y', #{$i}#{$value});
+        }
+      }
+
+    }
+
+  };

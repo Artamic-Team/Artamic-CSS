@@ -3,4 +3,5 @@ main.css.map
 node_modules/
 *.css
 test.html
+*.css.map
 

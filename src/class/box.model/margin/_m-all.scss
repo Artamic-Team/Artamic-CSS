@@ -1,0 +1,9 @@
+// @use "../../../storage/mixin" as *;
+@import "../../../storage/mixin";
+
+
+@include margin-padding-maker("m","margin");
+@include margin-padding-maker("m-top","margin-top");
+@include margin-padding-maker("m-right","margin-right");
+@include margin-padding-maker("m-bottom","margin-bottom");
+@include margin-padding-maker("m-left","margin-left");

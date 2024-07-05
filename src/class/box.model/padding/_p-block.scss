@@ -1,0 +1,91 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+
+
+
+// For padding block (start-end both)
+//class name will be .pb-postfix
+// positfix: 3x, 3rm, 3p ect
+//$i loop variable and $end loop break point and $key for set postfix
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+      //.pb-auto.
+      .pb-#{$key} {
+        padding-block: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.pb-3x etc.
+        .pb-#{$i}#{$key} {
+            padding-block: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };
+  
+
+
+  // For padding block start 
+//class name will be .pb-start-postfix
+// positfix: 3x, 3rm, 3p ect
+//$i loop variable and $end loop break point and $key for set postfix
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+       //.pb-start-auto.
+      .pb-start-#{$key} {
+        padding-block-start: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.pb-start-3x etc.
+        .pb-start-#{$i}#{$key} {
+            padding-block-start: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };
+
+
+
+
+// For padding block end 
+//class name will be .pb-end-postfix
+// positfix: 3x, 3rm, 3p ect
+//$i loop variable and $end loop break point and $key for set postfix
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+      //.pb-end-auto.
+      .pb-end-#{$key} {
+        padding-block-end: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.pb-end-3x etc.
+        .pb-end-#{$i}#{$key} {
+            padding-block-end: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };

@@ -1,0 +1,22 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+      .mx-#{$key} {
+        @include margin('x', #{$value});
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        .mx-#{$i}#{$key} {
+            @include margin('x', #{$i}#{$value});
+        }
+      }
+
+    }
+
+  };

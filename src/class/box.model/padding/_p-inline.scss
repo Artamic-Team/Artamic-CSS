@@ -1,0 +1,87 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+
+
+// For padding inline (start-end both)
+  //class name will be .pi-postfix
+  // positfix: 3x, 3rm, 3p ect
+  //$i loop variable and $end loop breck point
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+       // .pi-auto
+      .pi-#{$key} {
+        padding-inline: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.pi-3x etc.
+        .pi-#{$i}#{$key} {
+            padding-inline: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };
+
+
+// For padding inline start
+  //class name will be .pi-start-postfix
+  // positfix: 3x, 3rm, 3p ect
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+        // .pi-start-auto
+      .pi-start-#{$key} {
+        padding-inline-start: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.pi-start-3x etc.
+        .pi-start-#{$i}#{$key} {
+            padding-inline-start: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };
+
+
+
+
+  // For padding inline end
+  //class name will be .pi-end-postfix
+  // positfix: 3x, 3rm, 3p ect
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+       // .pi-end-auto.
+      .pi-end-#{$key} {
+        padding-inline-end: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.pi-end-3x etc.
+        .pi-end-#{$i}#{$key} {
+            padding-inline-end: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };

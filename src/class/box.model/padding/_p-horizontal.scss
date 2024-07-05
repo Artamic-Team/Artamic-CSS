@@ -1,0 +1,25 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+@each $key, $value in $units-postfix {
+    $end: end-value($key); // using function from func.scss
+
+    @if ($key =='auto') {
+      .px-#{$key} {
+        @include padding('x', #{$value});
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //set value of  padding-right and padding-left
+        //class name will be .px-size-postfix
+        // like .px-300x for 300px
+        .px-#{$i}#{$key} {
+            @include padding('x', #{$i}#{$value});
+        }
+      }
+
+    }
+
+  };
