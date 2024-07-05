@@ -1,0 +1,28 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+
+// scss for vertical value set 
+@each $key, $value in $units-postfix {
+    $end: end-value($key);//set end value 
+
+    @if ($key =='auto') {
+      //for auto value
+      .py-#{$key} {
+        @include padding('y', #{$value});
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //set value of  padding-top and padding-bottom
+        //class name will be .py-size-postfix
+        // like .py-300x for 300px
+        .py-#{$i}#{$key} {
+            @include padding('y', #{$i}#{$value});
+        }
+      }
+
+    }
+
+  };

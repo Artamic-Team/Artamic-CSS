@@ -1,0 +1,88 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+
+// For margin block(end and start both) 
+//class name will be .mb-postfix
+// positfix: 3x, 3rm, 3p ect
+//$i loop variable and $end loop break point and $key for set postfix
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+      //.mb-auto.
+      .mb-#{$key} {
+        margin-block: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.mb-3x
+        .mb-#{$i}#{$key} {
+            margin-block: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };
+
+
+// For margin block start
+//class name will be .mb-postfix
+// positfix: 3x, 3rm, 3p ect
+//$i loop variable and $end loop break point and $key for set postfix
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+      //.mb-start-auto.
+      .mb-start-#{$key} {
+        margin-block-start: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.mb-start-3x etc.
+        .mb-start-#{$i}#{$key} {
+            margin-block-start: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };
+
+
+
+
+// For margin block end
+//class name will be .mb-end-postfix
+// positfix: 3x, 3rm, 3p ect
+//$i loop variable and $end loop break point and $key for set postfix
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+      //.mb-end-auto.
+      .mb-end-#{$key} {
+        margin-block-end: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.mb-end-3x etc.
+        .mb-end-#{$i}#{$key} {
+            margin-block-end: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };

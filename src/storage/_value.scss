@@ -1,0 +1,39 @@
+// $start-margin-padding:1;
+// $end-margin-padding-x:300;
+// $end-margin-padding-p:200;
+// $end-margin-padding:100;
+// $auto-processed: true; // for break the loop when value will auto 
+
+$width-units: (
+    "x": px,
+    "rm": rem,
+    "v": vw,
+    "p": percentage,
+    "fit":fit-content,
+    "max-content":max-content,
+    "min-content":min-content,
+    "auto":auto,
+);
+
+
+
+$height-units: (
+    "x": px,
+    "rm": rem,
+    "v": vh,
+    "p": percentage,
+    "fit":fit-content,
+    "max-content":max-content,
+    "min-content":min-content,
+    "auto":auto,
+);
+
+
+// For margin and Padding
+$units-postfix: (
+    "x": "px",
+    "rm": "rem",
+    "e": "em",
+    "p": "%",
+    "auto":auto,
+);

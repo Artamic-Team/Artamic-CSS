@@ -1,0 +1,89 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+
+
+// For margin inline (start-end both)
+  //class name will be .mi-postfix(margin-inline)
+  // positfix: 3x, 3rm, 3p ect
+  //$i loop variable and $end loop breck point
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+       //.mi-auto
+      .mi-#{$key} {
+        margin-inline: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.mi-3x etc.
+        .mi-#{$i}#{$key} {
+            margin-inline: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };
+
+
+
+// For margin inline start
+  //class name will be .mi-start-postfix(margin-inline-end)
+  // positfix: 3x, 3rm, 3p ect
+  //$i loop variable and $end loop breck point
+@each $key, $value in $units-postfix {
+    $end: end-value($key);
+
+    @if ($key =='auto') {
+      //.mi-start-auto
+      .mi-start-#{$key} {
+        margin-inline-start: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.mi-start-3x etc.
+        .mi-start-#{$i}#{$key} {
+            margin-inline-start: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };
+
+
+
+// For margin inline end
+//class name will be .mi-end-postfix(margin-inline-end)
+// positfix: 3x, 3rm, 3p ect
+//$i loop variable and $end loop breck point
+@each $key, $value in $units-postfix {
+    $end: end-value($key);// set end value;
+
+    @if ($key =='auto') {
+      //.mi-end-auto
+      .mi-end-#{$key} {
+        margin-inline-end: auto;
+      }
+    }
+
+    @else {
+      @for $i from 1 through $end {
+        //class name will be like this
+        //.mi-end-3x etc.
+        .mi-end-#{$i}#{$key} {
+            margin-inline-end: #{$i}#{$value};
+        }
+      }
+
+    }
+
+  };
