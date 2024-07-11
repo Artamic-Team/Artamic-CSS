@@ -1,0 +1,9 @@
+@import "./../../../storage/mixin";
+@for $i from 0 through 100{
+
+    @for $j from 0 through 100{
+        .f-ee\:#{$i}\:#{$j}{
+            @include fancy-corner("ee", $i, $j);
+        }
+    }
+}
