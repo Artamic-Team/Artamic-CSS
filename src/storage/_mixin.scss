@@ -238,4 +238,31 @@
 };
 
 
+// base
+
+// set $p: "%"
+
+@mixin fancy-corner($pro, $x, $y) {
+  $p: "%";
+
+  @if($pro=="ss") {
+    border-start-start-radius: #{$x}#{$p} #{$y}#{$p};
+  }
+
+  @else if($pro=="se") {
+    border-start-end-radius: #{$x}#{$p} #{$y}#{$p};
+  }
+
+  @else if($pro=="es") {
+    border-end-start-radius: #{$x}#{$p} #{$y}#{$p};
+  }
+
+  @else if($pro=="ee") {
+    border-end-end-radius: #{$x}#{$p} #{$y}#{$p};
+  }
+
+
+}
+
+
 
