@@ -1,0 +1,11 @@
+@import "../../../storage/value";
+
+
+@each $key, $value in $bg-origin {
+    // class name: bg : value will be setted from $bg-origin map
+    // utility always create bg-padding like this class
+    //bg:padding
+    .bg-origin\:#{$key}{
+        background-origin: $value;
+    }
+    }

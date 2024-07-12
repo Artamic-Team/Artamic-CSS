@@ -1,0 +1,8 @@
+@import "../../storage/value";
+
+
+@each $key, $value in $display {
+    .#{$key}{
+        display: $value;
+    }
+    }

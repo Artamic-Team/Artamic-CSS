@@ -1,0 +1,14 @@
+@import "../../../storage/value";
+
+
+
+@each $key, $value in $bg-repeat {
+    // class name: bg : value will be setted from $bg-repeat map
+   //some class name example:
+   //if we want to repeat background ,class will be bg-repeat: yes 
+   //if we do not want to repeat background ,class will be bg-repeat: no
+   
+    .bg-repeat\:#{$key} {
+        background-repeat: $value;
+    }
+}

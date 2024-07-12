@@ -1,0 +1,20 @@
+@import "../../../storage/value";
+
+
+$p: "%";
+
+@each $key, $value in $bg-position-y{
+    .bg-y\:#{$key}{
+        background-position-y: $value;
+    }
+}
+
+@for $j from 0 through 100 {
+    // class name: bg : value will be setted from $bg-position-y map
+
+    //for percentage-y
+    .bg-y\:#{$j} {
+        background-position-y: #{$j}#{$p};
+    }
+
+}
