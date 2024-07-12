@@ -1,0 +1,10 @@
+@import "../../../storage/value";
+
+
+
+@each $key, $value in $bg-attachment {
+    //class name: bg:fixed when fixed value come from $bg-attatchment map
+    .bg\:#{$key} {
+        background-attachment: $value;
+    }
+}

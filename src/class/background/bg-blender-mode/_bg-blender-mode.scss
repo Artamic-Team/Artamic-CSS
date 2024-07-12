@@ -1,0 +1,10 @@
+
+@import "../../../storage/value";
+
+@each $key, $value in $blender-mode {
+    //class name: bg:value will be setted from $blender-mode map
+    //example : bg:saturation 
+    .bg-mode\:#{$key}{
+        background-blend-mode: $value;
+    }
+    }

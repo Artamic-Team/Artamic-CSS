@@ -1,0 +1,35 @@
+@import "../../../storage/value";
+
+$p: "%";
+
+
+@each $key, $value in $bg-size {
+    .bg\:#{$key} {
+        background-size: $value;
+    }
+}
+
+// for percent width
+//class name : bg-w:30 
+
+@for $i from 0 through 100 {
+
+    //for percentage-w
+    .bg-w\:#{$i} {
+        background-size: #{$i}#{$p};
+    }
+
+}
+
+
+//this utility class set background size 
+//  i loop for  width and  j loop for height
+
+@for $i from 0 through 100{
+    @for $j from 0 through 100{
+        //class name  example : bg-w:30-h:70
+        .bg-w\:#{$i}-h\:#{$j}{
+            background-size: #{$i}#{$p} #{$j}#{$p};    // value will be setted 30% 70% if class name : bg-w:30-h:70  
+       }
+    }
+}

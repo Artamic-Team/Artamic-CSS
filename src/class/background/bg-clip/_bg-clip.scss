@@ -1,0 +1,11 @@
+@import "../../../storage/value";
+
+@each $key, $value in $bg-clip {
+    // class name: bg : value will be setted from $bg-clip map
+    // utility always create bg-padding like this class
+    //bg:padding
+
+    .bg-clip\:#{$key} {
+        background-clip: $value;
+    }
+}
