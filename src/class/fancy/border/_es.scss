@@ -1,11 +1,12 @@
-@import "../../../storage/mixin";
+@import "./../../../storage/mixin";
 
 @for $i from 0 through 100{
 
     @for $j from 0 through 100{
+
         .f-es\:#{$i}\:#{$j}{
             @include fancy-corner("es", $i, $j);
-        }
+    }
+    
     }
 }
-

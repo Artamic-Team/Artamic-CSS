@@ -1,0 +1,41 @@
+@import "../../../storage/value";
+@import "../../../storage/color-storage";
+
+
+@each $key, $value in $line-size {
+
+    @each $color-name, $color-code in $colors {
+
+        .line-#{$key}\:#{$color-name} {
+            border-bottom: $value solid rgba(red($color-code), green($color-code), blue($color-code), 0.7);
+        }
+    }
+}
+
+// for x
+@each $key, $value in $line-size {
+
+    @each $color-name, $color-code in $colors {
+
+        .line-x-#{$key}\:#{$color-name} {
+
+            border-top: $value solid rgba(red($color-code), green($color-code), blue($color-code), 0.7);
+            border-bottom: $value solid rgba(red($color-code), green($color-code), blue($color-code), 0.7);
+
+        }
+    }
+}
+
+    // for y
+    @each $key, $value in $line-size {
+
+        @each $color-name, $color-code in $colors {
+
+            .line-y-#{$key}\:#{$color-name} {
+
+                border-left: $value solid rgba(red($color-code), green($color-code), blue($color-code), 0.7);
+                border-right: $value solid rgba(red($color-code), green($color-code), blue($color-code), 0.7);
+
+            }
+        }
+    }

@@ -3,6 +3,7 @@
 @for $i from 0 through 100{
 
     @for $j from 0 through 100{
+        
         .f-se\:#{$i}\:#{$j}{
             @include fancy-corner("se", $i, $j);
         }

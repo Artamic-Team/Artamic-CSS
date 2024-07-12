@@ -163,3 +163,18 @@ $display:(
     "ruby-base-container":ruby-base-container,
     "ruby-text-container":ruby-text-container
 );
+
+// Line Size value
+$line-size:(
+    "1": 1px,
+    "2": 2px,
+    "3": 3px,
+);
+
+//style
+$line-style:(
+    "": solid,
+    "dot": dotted,
+    "dash": dashed,
+    "double": double
+)

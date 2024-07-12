@@ -1,0 +1,27 @@
+@import "../../../storage/value";
+
+@each $key, $value in $line-size{
+
+    .line-#{$key}{
+        border-bottom: $value solid;
+    }
+}
+
+// for x
+@each $key, $value in $line-size{
+
+    .line-x-#{$key}{
+        border-top: $value solid;
+        border-bottom: $value solid;
+    }
+}
+
+// for y
+@each $key, $value in $line-size{
+
+    .line-y-#{$key}{
+
+        border-left: $value solid;
+        border-right: $value solid;
+    }
+}

@@ -1,0 +1,47 @@
+@import "../../../storage/value";
+@import "../../../storage/color-storage";
+
+
+
+@each $key, $value in $line-size {
+
+    @each $color-name, $color-code in $colors {
+
+        @each $style-name, $style-value in $line-style {
+
+            .line-#{$key}\:#{$color-name}\:#{$style-name} {
+                border-bottom: $value $style-value rgba(red($color-code), green($color-code), blue($color-code), 0.7);
+            }
+        }
+    }
+}
+
+// for x
+@each $key, $value in $line-size {
+
+    @each $color-name, $color-code in $colors {
+
+        @each $style-name, $style-value in $line-style {
+
+            .line-x-#{$key}\:#{$color-name}\:#{$style-name} {
+                border-top: $value $style-value rgba(red($color-code), green($color-code), blue($color-code), 0.7);
+                border-bottom: $value $style-value rgba(red($color-code), green($color-code), blue($color-code), 0.7);
+            }
+        }
+    }
+}
+
+// for y
+@each $key, $value in $line-size {
+
+    @each $color-name, $color-code in $colors {
+
+        @each $style-name, $style-value in $line-style {
+
+            .line-y-#{$key}\:#{$color-name}\:#{$style-name} {
+                border-left: $value $style-value rgba(red($color-code), green($color-code), blue($color-code), 0.7);
+                border-right: $value $style-value rgba(red($color-code), green($color-code), blue($color-code), 0.7);
+            }
+        }
+    }
+}
