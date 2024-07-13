@@ -1,0 +1,9 @@
+@import "../../storage/value"; //value data
+
+
+@each $key, $value in $overflow {
+  .flow-x\:#{$key} {
+    overflow-x: $value;
+  }
+
+}

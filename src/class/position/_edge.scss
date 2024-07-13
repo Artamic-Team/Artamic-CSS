@@ -1,0 +1,33 @@
+@import "../../storage/value"; //value data
+@import "../../storage/mixin"; //mixin data
+
+$edge: (
+    "top",
+    "right",
+    "left",
+    "bottom"
+);
+
+//loop for pixel
+
+@each $key in $edge {
+    @include edge-class-maker($key, 400, "x", "px");
+}
+
+//loop for rem
+
+@each $key in $edge {
+    @include edge-class-maker($key, 100, "rm", "rem");
+}
+
+//loop for parcentage
+
+@each $key in $edge {
+    @include edge-class-maker($key, 100, "", "%");
+}
+
+//loop for auto
+
+@each $key in $edge {
+    @include edge-class-maker($key, 0, "auto");
+}

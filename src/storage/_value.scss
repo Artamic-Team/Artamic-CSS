@@ -41,7 +41,7 @@ $units-postfix: (
 
 
 // Map for background-repeat
-$bg-repeat:(
+$bg-repeat: (
     "x": repeat-x,
     "y": repeat-y,
     "no": no-repeat,
@@ -52,7 +52,7 @@ $bg-repeat:(
 
 
 //  Map for background-size
-$bg-size:(
+$bg-size: (
     "contain": contain,
     "cover": cover,
     "auto": auto
@@ -60,36 +60,36 @@ $bg-size:(
 
 
 // Map for background-position
-$bg-position:(
-  "left":left,
-  "right":right,
-  "top": top,
-  "bottom":bottom,
-  "top-left": top left,
-  "top-right": top right,
-  "bottom-left": bottom left,
-  "bottom-right": bottom right,
-  "center": center
-  
+$bg-position: (
+    "left":left,
+    "right":right,
+    "top": top,
+    "bottom":bottom,
+    "top-left": top left,
+    "top-right": top right,
+    "bottom-left": bottom left,
+    "bottom-right": bottom right,
+    "center": center
 );
 
 // Map for background-position-x
-$bg-position-x:(
-  "left":left,
-  "right":right,
-  "center": center
+$bg-position-x: (
+    "left":left,
+    "right":right,
+    "center": center
 );
 
 // Map for background-position-y
-$bg-position-y:(
-  "top": top,
-  "bottom":bottom,
-  "center": center
+$bg-position-y: (
+    "top": top,
+    "bottom":bottom,
+    "center": center
 );
 
 
 // Map for background-origin
-$bg-origin:(
+
+$bg-origin: (
     "padding":padding-box,
     "border": border-box,
     "content": content-box
@@ -98,7 +98,7 @@ $bg-origin:(
 
 
 // Map for background-clip
-$bg-clip:(
+$bg-clip: (
     "padding":padding-box,
     "border": border-box,
     "content": content-box
@@ -106,7 +106,7 @@ $bg-clip:(
 
 
 // Map for background-attachment
-$bg-attachment:(
+$bg-attachment: (
     "scroll":scroll,
     "fixed": fixed,
     "local": local
@@ -114,7 +114,7 @@ $bg-attachment:(
 
 
 //Map for background-blender-mode
-$blender-mode:(
+$blender-mode: (
     "normal":normal,
     "multiply":multiply,
     "screen":screen,
@@ -136,7 +136,7 @@ $blender-mode:(
 
 
 // Map for display
-$display:(
+$display: (
     "block":block,
     "inline":inline,
     "inline-block":inline-block,
@@ -165,16 +165,45 @@ $display:(
 );
 
 // Line Size value
-$line-size:(
+$line-size: (
     "1": 1px,
     "2": 2px,
     "3": 3px,
 );
 
 //style
-$line-style:(
+$line-style: (
     "": solid,
     "dot": dotted,
     "dash": dashed,
     "double": double
-)
+);
+
+//overflow
+
+$overflow: (
+    "visible":visible,
+    "auto":auto,
+    "hide":hidden,
+    "scroll": scroll,
+    "clip": clip,
+);
+
+//position
+
+$position: (
+    "absolute" : absolute,
+    "fixed": fixed,
+    "relative": relative,
+    "static": static,
+    "sticky": sticky,
+    "init": initial,
+    "inherit": inherit,
+);
+
+$position-postfix: (
+    "x": px,
+    "rm": rem,
+    "": "%",
+    "auto": auto,
+);

@@ -1,0 +1,7 @@
+@import "../../storage/value"; //value data
+@import "../../storage/mixin"; //mixin data
+
+@include edge-class-maker("pos-x", 400, "x", "px");
+@include edge-class-maker("pos-x", 100, "rm", "rem");
+@include edge-class-maker("pos-x", 100, "", "%");
+@include edge-class-maker("pos-x", 0, "auto");
