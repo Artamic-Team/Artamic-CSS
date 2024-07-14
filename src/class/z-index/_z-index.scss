@@ -1,0 +1,23 @@
+@import "../../storage/value";
+@import "../../storage/mixin";
+
+//loop for starting and ending value
+
+@for $i from -400 through 400 {
+
+  .z-index\:#{$i} {
+
+    z-index: $i;
+  }
+}
+
+
+//for high
+.z-index\:high {
+  z-index: 99999;
+}
+
+//for low
+.z-index\:low {
+  z-index: -99999;
+}
