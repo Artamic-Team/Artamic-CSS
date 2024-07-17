@@ -1,4 +1,3 @@
-
 //number ratio
 //class name will be .A-4x3
 $ratio: (
@@ -20,11 +19,11 @@ $ratio: (
     "14x5": "14/5",
     "7x5": "7/5",
     "13x9": "13/9"
- 
+
 );
 
 //common ratio name and ratio
-$common-ratio:(
+$common-ratio: (
     "square": "1/1",
     "landscape": "4/3",
     "wide-screen": "16/9",
@@ -34,7 +33,7 @@ $common-ratio:(
 );
 
 // video and film screen ratio
-$video-film:(
+$video-film: (
     "HD": "16/9",
     "cinema": "21/9",
     "ultra-wide": "21/9",
@@ -43,18 +42,20 @@ $video-film:(
 );
 
 // social media ratio
-$social-media:(
+$social-media: (
     "insta-post": "1/1",
     "insta-story": "9/16",
-    "y-thum": "16/9", // youtube-thumbnail
+    "y-thum": "16/9",
+    // youtube-thumbnail
     "fb-cover": "820/312",
-    "x-cover": "1500/500", // twitter-cover
+    "x-cover": "1500/500",
+    // twitter-cover
     "ln-cover": "1584/396"
 
 );
 
 
-$print-media:(
+$print-media: (
     "letter": "8.5/11",
     "A4": "210/297",
     "A3": "297/420",
@@ -65,7 +66,7 @@ $print-media:(
 
 
 // mixed up all name
-$mixed:(
+$mixed: (
     "panorama": "4/1",
     "video-call": "4/3",
     "mobile": "9/16",

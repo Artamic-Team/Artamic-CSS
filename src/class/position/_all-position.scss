@@ -1,0 +1,44 @@
+@import "../../storage/value"; //value data
+
+
+@each $key, $value in $position {
+    .#{$key} {
+        position: $value;
+    }
+}
+
+// High and low
+.top\:high {
+    top: 9999px;
+}
+
+.top\:low {
+    top: -9999px;
+}
+
+// High and low
+.right\:high {
+    right: 9999px;
+}
+
+.right\:low {
+    right: -9999px;
+}
+
+// High and low
+.bottom\:high {
+    bottom: 9999px;
+}
+
+.bottom\:low {
+    bottom: -9999px;
+}
+
+// High and low
+.left\:high {
+    left: 9999px;
+}
+
+.left\:low {
+    left: -9999px;
+}

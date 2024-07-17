@@ -213,6 +213,7 @@
     $end: end-value($key); // set end value for loop
 
     @if ($key =='auto') {
+
       // class will be .m-auto or .p-auto
       // or .m-position-postix or .p-position-auto
       //$postfix: m or p and $prop css margin padding,propery
@@ -223,6 +224,7 @@
 
     @else {
       @for $i from 1 through $end {
+
         // class will be .m-3x or .p-4px or
         // .m-position-postix or .p-position-postix
         //$postfix: m or p or m-position or p-position
@@ -235,7 +237,9 @@
     }
 
   }
-};
+}
+
+;
 
 
 // base
@@ -323,3 +327,72 @@
 }
 
 /*----------Text----------*/
+
+//position mixin
+
+@mixin edge-set($pro, $value, $u: "") {
+
+
+  @if($pro=="top") {
+    top: #{$value}#{$u};
+  }
+
+  @else if($pro=="right") {
+    right: #{$value}#{$u};
+  }
+
+  @else if($pro=="left") {
+    left: #{$value}#{$u};
+  }
+
+  @else if($pro=="botttom") {
+    bottom: #{$value}#{$u};
+  }
+
+  @else if($pro=="pos-x") {
+    right: #{$value}#{$u};
+    left: #{$value}#{$u};
+  }
+
+  @else if($pro=="pos-y") {
+    top: #{$value}#{$u};
+    bottom: #{$value}#{$u};
+  }
+
+  @else {
+    inset:#{$value}#{$u};
+  }
+
+
+}
+
+//postion-edge mixin
+
+@mixin edge-class-maker($key, $end, $postfix, $u: "") {
+  @if ($postfix=="auto") {
+    .#{$key}\:auto {
+
+      @include edge-set($key, "auto");
+
+    }
+  }
+
+  @else {
+
+    @for $i from 0 through $end {
+      @if($i==0) {
+        .#{$key}\:#{$i} {
+
+          @include edge-set($key, $i);
+        }
+      }
+
+      @else {
+        .#{$key}\:#{$i}#{$postfix} {
+
+          @include edge-set($key, $i, $u);
+        }
+      }
+    }
+  }
+}
