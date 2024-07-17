@@ -1,0 +1,6 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+@each $key, $value in $font-kernings {
+    @include set-font-kerning($key, $value, "font-kerning");
+}

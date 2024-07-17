@@ -1,0 +1,6 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+@each $key, $value in $font-weights {
+    @include set-font-weight($key, $value, "font-weight");
+}

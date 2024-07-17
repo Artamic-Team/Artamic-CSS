@@ -1,0 +1,6 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+@each $key, $value in $font-sizes {
+    @include set-font-size($key, $value, "font-size");
+}

@@ -1,0 +1,6 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+@each $key, $value in $font-optical-sizings {
+    @include set-font-optical-sizing($key, $value, "font-optical-sizing");
+  }

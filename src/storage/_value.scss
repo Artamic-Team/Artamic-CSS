@@ -177,4 +177,97 @@ $line-style:(
     "dot": dotted,
     "dash": dashed,
     "double": double
-)
+);
+
+
+/*----------Typography----------*/
+/*----------Font----------*/
+// font-family
+$font-families: (
+    'arial': Arial, sans-serif,
+    'verdana': Verdana, sans-serif,
+    'tahoma': Tahoma, sans-serif,
+    'georgia': Georgia, serif,
+    'garamond': Garamond, serif,
+    'times-new-roman': 'Times New Roman', serif,
+    'brush-script': 'Brush Script MT', cursive,
+    'monospace': 'Courier New', monospace
+);
+
+// font-size
+$font-sizes: (
+    'xs': 0.7rem,
+    'sm': 0.875rem,
+    'md': 1rem,
+    'lg': 1.25rem,
+    'xl': 1.5rem,
+    '2xl': 1.75rem,
+    '3xl': 2rem,
+    '4xl': 2.25rem,
+    '5xl': 2.5rem
+);
+
+// font-style
+$font-styles: (
+    'normal': normal,
+    'italic': italic,
+    'oblique': oblique
+);
+
+// font-weight
+$font-weights: (
+    'thin': 100,
+    'extra-light': 200,
+    'light': 300,
+    'normal': 400,
+    'medium': 500,
+    'semi-bold': 600,
+    'bold': 700,
+    'bolder': 800,
+    'extra-bold': 900
+);
+
+// font-variant
+$font-variants: (
+    'normal': normal,
+    'small': small-caps,
+    'all-small': all-small-caps,
+    'petite': petite-caps,
+    'all-petite': all-petite-caps,
+    'unicase': unicase,
+    'titling': titling-caps
+);
+
+// font-stretching
+$font-stretches: (
+    'ultra-condensed': ultra-condensed,
+    'extra-condensed': extra-condensed,
+    'condensed': condensed,
+    'semi-condensed': semi-condensed,
+    'normal': normal,
+    'semi-expanded': semi-expanded,
+    'expanded': expanded,
+    'extra-expanded': extra-expanded,
+    'ultra-expanded': ultra-expanded
+);
+
+// font-kerning
+$font-kernings: (
+    'auto': auto,
+    'normal': normal,
+    'none': none
+);
+
+// font-sythesis
+$font-syntheses: (
+  'auto': auto,
+  'none': none
+);
+
+// font-optical-sizing
+$font-optical-sizings: (
+  'auto': auto,
+  'none': none
+);
+
+/*----------Text----------*/
