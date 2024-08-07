@@ -177,33 +177,4 @@ $line-style: (
     "dot": dotted,
     "dash": dashed,
     "double": double
-);
-
-//overflow
-
-$overflow: (
-    "visible":visible,
-    "auto":auto,
-    "hide":hidden,
-    "scroll": scroll,
-    "clip": clip,
-);
-
-//position
-
-$position: (
-    "absolute" : absolute,
-    "fixed": fixed,
-    "relative": relative,
-    "static": static,
-    "sticky": sticky,
-    "init": initial,
-    "inherit": inherit,
-);
-
-$position-postfix: (
-    "x": px,
-    "rm": rem,
-    "": "%",
-    "auto": auto,
-);
+)

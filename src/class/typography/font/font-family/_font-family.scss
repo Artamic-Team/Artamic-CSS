@@ -1,0 +1,6 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+@each $key, $value in $font-families {
+    @include set-font-family($key, $value, "font-family");
+}

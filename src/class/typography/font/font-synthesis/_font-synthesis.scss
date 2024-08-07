@@ -1,0 +1,6 @@
+@import "../../../storage/value";
+@import "../../../storage/mixin";
+
+@each $key, $value in $font-syntheses {
+  @include set-font-synthesis($key, $value, "font-synthesis");
+}

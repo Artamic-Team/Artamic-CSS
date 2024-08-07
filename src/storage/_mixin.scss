@@ -270,6 +270,63 @@
 
 
 
+/*----------Typography----------*/
+/*----------Font----------*/
+@mixin set-font-family($key, $value, $property) {
+  .#{$property}-#{$key} {
+      font-family: $value;
+  }
+}
+
+@mixin set-font-size($key, $value, $property) {
+  .#{$property}-#{$key} {
+      font-size: $value;
+  }
+}
+
+@mixin set-font-style($key, $value, $property) {
+  .#{$property}-#{$key} {
+      font-style: $value;
+  }
+}
+
+@mixin set-font-weight($key, $value, $property) {
+  .#{$property}-#{$key} {
+      font-weight: $value;
+  }
+}
+
+@mixin set-font-variant($key, $value, $property) {
+  .#{$property}-#{$key} {
+      font-variant: $value;
+  }
+}
+
+@mixin set-font-stretch($key, $value, $property) {
+  .#{$property}-#{$key} {
+      font-stretch: $value;
+  }
+}
+
+@mixin set-font-kerning($key, $value, $property) {
+  .#{$property}-#{$key} {
+      font-kerning: $value;
+  }
+}
+
+@mixin set-font-synthesis($key, $value, $property) {
+  .#{$property}-#{$key} {
+    font-synthesis: $value;
+  }
+}
+
+@mixin set-font-optical-sizing($key, $value, $property) {
+  .#{$property}-#{$key} {
+    font-optical-sizing: $value;
+  }
+}
+
+/*----------Text----------*/
 
 //position mixin
 
